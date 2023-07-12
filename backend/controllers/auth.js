@@ -74,3 +74,6 @@ const sendTokenResponse = (user,statusCode,res) =>{
             name:user.name
         }) 
 }
+
+
+
