@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Comment_Message(props) {
+export default function CommentMessage(props) {
     return (
         <>
             <p className='comment-content'>

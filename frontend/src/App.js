@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Home from "./screens/Home";
 import { Routes, Route } from "react-router-dom"
 import Login from "./screens/Login";

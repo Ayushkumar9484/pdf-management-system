@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import PdfStrip from '../componenets/pdfStrip'
-import Dropzone from '../componenets/Dropzone'
+// import Dropzone from '../componenets/Dropzone'
 import Pdfinput from '../componenets/Pdfinput'
 import { CurrentUser } from '../componenets/Usercontext'
 import Navbar from '../componenets/Navbar'
@@ -9,7 +9,7 @@ import Comment from '../componenets/Comment'
 
 export default function Home() {
     // const [user,setUser] = useContext(CurrentUser)
-    const { user, setUser, commentOn } = useContext(CurrentUser)
+    const { user, setUser } = useContext(CurrentUser)
     const [Data, setData] = useState('')
     const [currentComment,setCurreentComment] = useState("")
 

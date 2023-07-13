@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
+import React, { useContext } from 'react';
+// import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import './component_stye.css'
@@ -7,9 +7,9 @@ import { CurrentUser } from '../componenets/Usercontext'
 
 
 export default function PdfStrip(props) {
-    pdfjs.GlobalWorkerOptions.workerSrc =
-        `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-    const { commentOn, setCommentOn } = useContext(CurrentUser)
+    // pdfjs.GlobalWorkerOptions.workerSrc =
+    //     `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+    const {  setCommentOn } = useContext(CurrentUser)
     const Addcomment = (e) => {
         e.preventDefault()
         setCommentOn(true)
@@ -45,7 +45,7 @@ export default function PdfStrip(props) {
                 </div>
                 <div className='strip-options'>
                     <div className='every-option'>
-                        <a href={`${process.env.REACT_APP_PDF_PATH}${props.data.path}`} target='_blank'>
+                        <a href={`${process.env.REACT_APP_PDF_PATH}${props.data.path}`} target='_blank' rel='noreferrer'>
                             <button type='submit' className='btn btn-primary'>See PDF</button>
                         </a>
                     </div>

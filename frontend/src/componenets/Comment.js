@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { CurrentUser } from './Usercontext'
 import CloseIcon from '@mui/icons-material/Close';
 import SendIcon from '@mui/icons-material/Send';
-import Comment_Message from './Comment_Message';
+import CommentMessage from './CommentMessage';
 
 export default function Comment(props) {
     const { commentOn, setCommentOn } = useContext(CurrentUser)
@@ -75,7 +75,7 @@ export default function Comment(props) {
                 <div className='main-section'>
                 {
                     CommentData && CommentData.map((data,index) => {
-                        return <Comment_Message data={data} />
+                        return <CommentMessage data={data} />
                     })
                 }
                 </div>

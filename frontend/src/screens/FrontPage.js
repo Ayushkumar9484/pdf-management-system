@@ -5,7 +5,7 @@ export default function FrontPage() {
     return (
         <>
             <div className="front_page_div">
-                <img src={Coverpage} className="front_page_image" />
+                <img src={Coverpage} className="front_page_image" alt='FrontPage'/>
             </div>
         </>
     )
