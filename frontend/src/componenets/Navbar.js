@@ -16,7 +16,7 @@ export default function Navbar(props) {
             <div className="d-flex justify-content-between bg-  m-2 border-bottom">
                 <div className='m-2 p-2'>
                     <div className='h3'>
-                        <img src={CoverPage_logo} width="60px" height="60px" />
+                        <img src={CoverPage_logo} width="60px" height="60px" alt='Navbar Logo'/>
                     </div>
                 </div>
                 <div className='bg- p-4 title'>
