@@ -32,7 +32,7 @@ export default function Pdfinput(props) {
         formdata.append('mypdf', pdf)
         formdata.append('token', window.localStorage.getItem("token"))
         try {
-            let response = await axios.post("http://localhost:5000/api/v1/pdf/save", formdata)
+            let response = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/v1/pdf/save`, formdata)
             console.log("THIS IS THE RESPONSE : ", response)
             if (response.data.success) {
                 console.log("PDF UPLOADED SUCCESSFULLY")

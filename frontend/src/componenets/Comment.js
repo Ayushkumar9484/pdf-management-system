@@ -12,7 +12,7 @@ export default function Comment(props) {
     const UpdateComments = async () => {
         console.log("Update Comments Called")
         try{
-            const res= await fetch("http://localhost:5000/api/v1/comment/Allcomments",{
+            const res= await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/comment/Allcomments`,{
                 method:'POST',
                 headers: {
                     "Content-Type": "application/json"
@@ -34,7 +34,7 @@ export default function Comment(props) {
         console.log("Save Comments Called")
         e.preventDefault()
         try{
-            const response = await fetch("http://localhost:5000/api/v1/comment/save",{
+            const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/comment/save`,{
                 method:'POST',
                 headers: {
                     "Content-Type": "application/json"

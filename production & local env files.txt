@@ -1,2 +1,7 @@
+REACT_APP_PDF_PATH = http://localhost:5000/public/pdf/
+REACT_APP_BASE_URL = http://localhost:5000
+
+// For Production level
+
 REACT_APP_PDF_PATH = https://pdf-management-system-backend.onrender.com/public/pdf/
 REACT_APP_BASE_URL = https://pdf-management-system-backend.onrender.com

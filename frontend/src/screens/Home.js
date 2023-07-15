@@ -18,7 +18,7 @@ export default function Home() {
         var token=localStorage.getItem("token")
         if(!token) return
 
-        const res = await fetch("http://localhost:5000/api/v1/dashboard", {
+        const res = await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/dashboard`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -26,7 +26,7 @@ export default function Dropzone({ className }) {
             formdata.append(`file${index}`, file);
           });
         formdata.append('token',window.localStorage.getItem("token"))
-        fetch("http://localhost:5000/api/v1/pdf/save",{
+        fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/pdf/save`,{
             method:"POST",
             body:formdata
         })
