@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './style.css'
 import SignUpImage from '../images/SignUpPageImage.jpg'
+import Error from '../componenets/Error'
 
 
 export default function Signup() {
@@ -37,6 +38,9 @@ export default function Signup() {
       .then((data) => {
         if (data.success === false) {
           console.log("Error : ", data.error)
+          if(data.error === 'Duplicate field value enetered')
+          setError("Already Registered")
+          else setError(data.error)
         }
         else {
           console.log("User Registered Successfully")
@@ -46,9 +50,9 @@ export default function Signup() {
   }
   return (
     <>
+    {error && <Error error={error}/>}
       <div className='signup-card-outer 100vh'>
         <div className='signin-card'>
-          {error && <h1>{error}</h1>}
           <div className='signup template d-flex rounded-4 signup-card-inner'>
             <div className='main-card-sighup-outer rounded-4'>
               <div className='form_container p-5 rounded bg-white main-card-signup'>

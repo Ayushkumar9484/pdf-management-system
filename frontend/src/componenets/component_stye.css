@@ -106,3 +106,10 @@
     margin-left: 10px;
     width: fit-content;
 }
+.error{
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    width: fit-content;
+    margin: 20px;
+}

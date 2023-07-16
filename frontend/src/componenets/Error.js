@@ -1,6 +1,8 @@
 import React from 'react'
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
+import './component_stye.css'
+import './component_stye.css'
 
 export default function Error(props) {
     return (
@@ -8,7 +10,7 @@ export default function Error(props) {
         //     {props.error}
         // </div>
         <Stack sx={{ width: '100%' }} spacing={2}>
-            <Alert severity="error">{props.error}</Alert>
+            <Alert severity="error" className='error'>{props.error}</Alert>
         </Stack>
     )
 }

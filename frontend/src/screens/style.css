@@ -58,6 +58,9 @@
 
 .main-card-sighin-outer {
     background-color: rgb(65, 8, 94);
+    display: block;
+    justify-content: center;
+    align-items: center;
 }
 .main-card-sighup-outer {
     background-color: rgb(31, 58, 130);

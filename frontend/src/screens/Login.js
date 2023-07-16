@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { CurrentUser } from '../componenets/Usercontext'
 import './style.css'
 import LoginImage from '../images/LoginPageImage.png'
+import Error from '../componenets/Error'
 
 
 export default function Login() {
@@ -51,14 +52,15 @@ export default function Login() {
 
   return (
     <>
+      {error && <Error error={error}/>}
       <div className='signin-card-outer 100vh'>
         <div className=' signin-card'>
-          {error && <h1>{error}</h1>}
           <div className='login template d-flex rounded-4 signin-card-inner' >
             <div className='image-container-signin rounded-4'>
               <img src={LoginImage} width='500px' height='500px' alt='Login' />
             </div>
             <div className='main-card-sighin-outer rounded-4'>
+            
               <div className='form_container p-5 rounded main-card-signin'>
                 <form onSubmit={handlesubmit}>
                   <h3 className='text-center' style={{fontFamily: "Gill Sans Extrabold"}}>Sign In</h3>
